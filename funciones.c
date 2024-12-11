@@ -6,10 +6,21 @@ void registrarLibros(struct Libro Libros [], int i, int n)
 {
     int len;
  
-    //Ingreso ID Libro
-    printf("Ingrese el id del libro %d: ", i+1);
-    scanf("%d", &Libros[i].ID);
-    getchar();
+    //do {
+        //Ingreso ID Libro
+        printf("Ingrese el id del libro %d: ", i+1);
+        scanf("%d", &Libros[i].ID);
+        getchar();
+        for(int e=0; e<i;e++){
+            do{
+                if (Libros[i].ID==Libros[e].ID){
+                    printf("Ingrese otro id, ese ya esta en uso\n");
+                    scanf("%d", &Libros[i].ID);
+                }
+            }while(Libros[i].ID==Libros[e].ID);
+            
+        }
+    //}// while(Libros[i].ID==Libros[i-1].ID);
  
     //Ingreso titulo del libro
     printf("Ingrese el titulo del libro %d: ", i+1);
