@@ -2,7 +2,7 @@
 #include <string.h>
 #include "funciones.h"
  
-void registrarLibros(struct Libro Libros [], int i)
+void registrarLibros(struct Libro Libros [], int i, int n)
 {
     int len;
  
